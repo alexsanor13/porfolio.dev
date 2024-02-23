@@ -1,0 +1,115 @@
+---
+import AWS from "./icons/AWS.astro"
+import Azure from "./icons/Azure.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
+import Cplus from "./icons/Cplus.astro"
+import Csharp from "./icons/Csharp.astro"
+import CSS from "./icons/CSS.astro"
+import Docker from "./icons/Docker.astro"
+import GCP from "./icons/GCP.astro"
+import Go from "./icons/Go.astro"
+import HTML from "./icons/HTML.astro"
+import JS from "./icons/JS.astro"
+import jQuery from './icons/jQuery.astro'
+import MongoDB from "./icons/MongoDB.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import ReactJS from "./icons/ReactJS.astro"
+import SQLServer from "./icons/SQLServer.astro"
+import VueJS from "./icons/VueJS.astro"
+
+interface Tag {
+  name: string;
+  class: string;
+  icon: typeof VueJS | typeof NodeJS | typeof JS | typeof ReactJS | typeof Go | typeof Csharp | typeof Cplus | typeof MongoDB | typeof SQLServer | typeof Azure | typeof AWS | typeof GCP; // Añade aquí todos los tipos de iconos que necesites
+}
+
+export const TAGS: Record<string, Tag> = {
+    AWS: {
+      name: "AWS",
+      class: "bg-[lightgray] text-[#232F3E]",
+      icon: AWS
+    },
+    AZURE: {
+      name: "Microsoft Azure",
+      class: "bg-white text-[#0078D4]",
+      icon: Azure
+    },
+    BOOTSTRAP: {
+      name: "Bootstrap",
+      class: "bg-black text-[white]",
+      icon: Bootstrap
+    },
+    CPLUS: {
+      name: "C++",
+      class: "bg-[#87C0EF] text-white",
+      icon: Cplus
+    },
+    CSHARP: {
+      name: "C#",
+      class: "bg-[#624468] text-white",
+      icon: Csharp
+    },
+    CSS: {
+        name: "CSS",
+        class: "bg-[#92c5ea] text-[#37628e]",
+        icon: CSS
+    },
+    DOCKER: {
+        name: "Docker",
+        class: "bg-[#1f2d49] text-white",
+        icon: Docker
+    },
+    GCP: {
+      name: "Google Cloud",
+      class: "bg-white text-[#202124]",
+      icon: GCP
+    },
+    GOLANG: {
+      name: "Golang",
+      class: "bg-[#00acd7] text-white",
+      icon: Go
+    },
+    HTML: {
+        name: "HTML",
+        class: "bg-[#ef9f53] text-[#582603]",
+        icon: HTML
+    },
+    JAVASCRIPT: {
+      name: "JavaScript",
+      class: "bg-[#f7df1e] text-black",
+      icon: JS
+    },
+    JQUERY: {
+      name: "jQuery",
+      class: "bg-white text-[#0769AD]",
+      icon: jQuery
+    },
+    MONGODB: {
+      name: "MongoDB",
+      class: "bg-[#dfe284] text-black",
+      icon: MongoDB
+    },
+    NODE: {
+      name: "Node.js",
+      class: "bg-[#233056] text-white",
+      icon: NodeJS
+    },
+    REACT: {
+      name: "React.js",
+      class: "bg-[#23272FF2] text-white",
+      icon: ReactJS
+    },
+    SQLSERVER: {
+      name: "SQL Server",
+      class: "bg-white text-[red]",
+      icon: SQLServer
+    },
+    VUE: {
+      name: "Vue.js",
+      class: "bg-[#1A1A1A] text-white",
+      icon: VueJS
+    },
+  }
+
+export type { Tag };
+---

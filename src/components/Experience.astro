@@ -1,29 +1,69 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
-const EXPERIENCIE = [
+import {TAGS} from "./Tags.astro"
+import type { Tag } from './Tags.astro';
+
+const EXPERIENCIES = [
   {
-    date: "Actualmente...",
-    title: "Creador de Contenido",
-    company: "Twitch",
+    date: "June 2022",
+    title: "Software Engineer",
+    company: "Kantar",
     description:
-      "Divulgo sobre programación y desarrollo web en diferentes plataformas. Galardonado como mejor creador de contenido de habla no-inglesa en 2022 y mejor comunidad en 2023 por GitHub.",
-    link: "https://twitch.tv/midudev",
+      `Developed new functionalities, enhancements, and
+      bug solutions for applications focused on analyzing 
+      audience data with a global user base.
+      Contributed to the development of both web and desktop 
+      applications using various technologies such as JavaScript, C++ and C#.`,
+    tags: [TAGS.CPLUS, TAGS.CSHARP, TAGS.JAVASCRIPT, TAGS.JQUERY ]
   },
   {
-    date: "Septiembre 2022",
-    title: "Principal Frontend Engineer",
-    company: "Adevinta Spain",
+    date: "December 2021",
+    title: "Software Engineer",
+    company: "Sparsity Technologies",
     description:
-      "Responsable de la plataforma, componentes y utilidades para la creación y desarrollo de aplicaciones web. Mejora de un 30% en la entrega de software. Implantación de medidas de integración continua y despliegue con A/B testing en más de 15 equipos.",
+      `Developed new functionalities for client websites in the sales and social network sectors.
+      Full-stack developer, managing responsive and interactive front-end features using Vue and 
+      Bootstrap. Additionally, contributed to the development of back-end microservices using Golang 
+      and MySQL. Acquired knowledge of graph databases (Sparksee) and 
+      implemented algorithms with Java to enhance specific functionalities within projects, 
+      such as the recommender feature in a video social network.`,
+    tags: [TAGS.VUE,TAGS.BOOTSTRAP, TAGS.GOLANG, TAGS.DOCKER]
+  },
+  {
+    date: "June 2021",
+    title: "Cloud Engineer",
+    company: "Deloitte",
+    description:
+      `Managed cloud infrastructures for global clients in the food, biomedical, 
+      and technological sectors using Microsoft Azure. 
+      Responsibilities included overseeing virtualization, managing cost structures, ensuring availability, 
+      and Oracle SQL among others.
+      Demonstrated the ability to handle multiple projects simultaneously under pressure, efficiently 
+      engaging with clients, and improving task organization and management.
+      Certificated in Microsoft Azure (AZ-900).`,
+    tags: [TAGS.AZURE]
+  },
+  {
+    date: "September 2019",
+    title: "Junior Software Engineer",
+    company: "Zetes S.A.",
+    description:
+      `Developed functionalities for a website in the supply chain sector. 
+      The website was built with C#/.NET and jQuery, utilized SQL Server, and was managed and deployed in Microsoft Azure.
+      Final project for a Bachelor's degree in Computer Engineering (Use of cloud solutions for process 
+      automation). The project involved automating a process to receive a report summarizing invoices and 
+      other relevant information via email within a specific time frame using Azure Logic Apps, SQL Server, 
+      and C#/.NET.`,
+    tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS, TAGS.CSHARP, TAGS.SQLSERVER, TAGS.AZURE,]
   },
 ]
 ---
 
 <ol class="relative mt-16">
   {
-    EXPERIENCIE.map((experiencie) => (
+    EXPERIENCIES.map((experiencies) => (
       <li class="">
-        <ExperienceItem {...experiencie} />
+        <ExperienceItem {...experiencies} />
       </li>
     ))
   }
