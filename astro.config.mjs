@@ -5,5 +5,5 @@ import robotsTxt from 'astro-robots-txt'
 
 export default defineConfig({
 	integrations: [tailwind(), robotsTxt()],
-	site: 'https://alex-portfolio-qqdee6ngp-alexsanor13s-projects.vercel.app/',
+	site: 'https://www.alexsanchezortega.com',
 })
