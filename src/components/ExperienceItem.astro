@@ -21,11 +21,11 @@ const descriptionParagraphs = description.split("\n")
 >
   <div class="relative pb-6 md:col-span-2">
     <div class="sticky top-0">
-      <span class="text-[#b993ea] -left-[42px] absolute rounded-full text-5xl"
+      <span class="text-[#683f9d] dark:text-[#b993ea] -left-[42px] absolute rounded-full text-5xl"
         >&bull;</span
       >
 
-      <h3 class="text-xl font-bold text-[#b993ea]">{title}</h3>
+      <h3 class="text-xl font-bold text-[#683f9d] dark:text-[#b993ea]">{title}</h3>
       <h4 class="font-semibold text-xl text-gray-600 dark:text-white">{company}</h4>
       <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{date}</time>
       <ul class="flex flex-wrap mt-4 gap-2">
@@ -42,7 +42,7 @@ const descriptionParagraphs = description.split("\n")
       </ul>
     </div>
   </div>
-  <div class="relative flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
+  <div class="relative text-justify flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
     {descriptionParagraphs.map((description) => <p>{description}</p>)}
     {
       link && (

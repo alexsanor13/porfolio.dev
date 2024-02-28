@@ -9,6 +9,8 @@ import ProfileCheck from "@/components/icons/ProfileCheck.astro"
 import Projects from "@/components/Projects.astro"
 import SectionContainer from "@/components/SectionContainer.astro"
 import Hero from "@/components/Hero.astro"
+
+const sectionTitleClass = "mb-8 flex items-center text-3xl font-semibold gap-x-4 text-black/80 dark:text-white"
 ---
 
 <Layout
@@ -24,7 +26,7 @@ import Hero from "@/components/Hero.astro"
     <div class="space-y-24">
     <SectionContainer id="experience">
       <h2
-        class="flex items-center mb-12 text-3xl font-semibold gap-x-4 text-black/80 dark:text-white"
+        class={sectionTitleClass}
       >
         <Briefcase class="size-8" />
         Experience
@@ -34,9 +36,9 @@ import Hero from "@/components/Hero.astro"
 
     <SectionContainer id="projects">
       <h2
-        class="flex items-center mb-6 text-3xl font-semibold gap-x-4 text-black/80 dark:text-white"
+        class={sectionTitleClass}
       >
-        <CodeIcon class="size-7" />
+        <CodeIcon class="size-8" />
         Projects
       </h2>
       <Projects />
@@ -44,7 +46,7 @@ import Hero from "@/components/Hero.astro"
 
     <SectionContainer id="about-me">
       <h2
-        class="flex items-center mb-8 text-3xl font-semibold gap-x-4 text-black/80 dark:text-white"
+        class={sectionTitleClass}
       >
         <ProfileCheck class="size-8" />
         About me
