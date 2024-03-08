@@ -9,9 +9,11 @@ import Docker from "./icons/Docker.astro"
 import GCP from "./icons/GCP.astro"
 import Go from "./icons/Go.astro"
 import HTML from "./icons/HTML.astro"
+import JAVA from "./icons/Java.astro"
 import JS from "./icons/JS.astro"
 import jQuery from './icons/jQuery.astro'
 import MongoDB from "./icons/MongoDB.astro"
+import MySQL from "./icons/MySQL.astro"
 import NodeJS from "./icons/NodeJS.astro"
 import ReactJS from "./icons/ReactJS.astro"
 import SQLServer from "./icons/SQLServer.astro"
@@ -26,7 +28,7 @@ interface Tag {
 export const TAGS: Record<string, Tag> = {
     AWS: {
       name: "AWS",
-      class: "bg-[lightgray] text-[#232F3E]",
+      class: "bg-[#222f3e] text-white",
       icon: AWS
     },
     AZURE: {
@@ -70,9 +72,14 @@ export const TAGS: Record<string, Tag> = {
       icon: Go
     },
     HTML: {
-        name: "HTML",
-        class: "bg-[#ffa265] text-black",
-        icon: HTML
+      name: "HTML",
+      class: "bg-[#ffa265] text-black",
+      icon: HTML
+    },
+    JAVA: {
+      name: "Java",
+      class: "bg-[#5382a1] text-white",
+      icon: JAVA
     },
     JAVASCRIPT: {
       name: "JavaScript",
@@ -88,6 +95,11 @@ export const TAGS: Record<string, Tag> = {
       name: "MongoDB",
       class: "bg-[#dfe284] text-black",
       icon: MongoDB
+    },
+    MYSQL: {
+      name: "MySQL",
+      class: "bg-[#074453] text-white",
+      icon: MySQL
     },
     NODE: {
       name: "Node.js",
