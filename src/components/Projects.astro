@@ -2,6 +2,7 @@
 import { TAGS } from './Tags.astro';
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Description from './Description.astro';
 
 
 const PROJECTS = [
@@ -9,8 +10,7 @@ const PROJECTS = [
     title: "La Masia Events",
     subtitle: "A website for an association",
     description:
-      `Visit to buy tickets and know more about La Masia Events,
-      an association that organize events and parties.`,
+      `Visit to buy tickets and know more about La Masia Events, an association that organize events and parties.`,
     link: "https://lamasiaevents.com",
     image: "/projects/lamasia.webp",
     tags: [TAGS.REACT, TAGS.NODE, TAGS.MONGODB, TAGS.AWS, TAGS.GCP],
@@ -19,9 +19,7 @@ const PROJECTS = [
     title: "PONG",
     subtitle: "Classic game for 2 players (only PC)",
     description:
-      `Experience the nostalgia of the classic Pong game with a modern twist. 
-      Enjoy competitive fun for two players, crafted entirely using vanilla 
-      JavaScript for a seamless and responsive gaming experience.`,
+      `Experience the nostalgia of the classic Pong game with a modern twist. Enjoy competitive fun for two players, crafted entirely using vanilla JavaScript for a seamless and responsive gaming experience.`,
     image: "/projects/pong.webp",
     link: "https://pong-ten-beige.vercel.app/",
     tags: [TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
@@ -30,10 +28,7 @@ const PROJECTS = [
     title: "Use of cloud solutions for process automation",
     subtitle: "Final project for the Bachelor's degree",
     description:
-      `Creation of a website for a company in the supply 
-      chain sector and automation of processes to receive a report summarizing 
-      invoices and other relevant information via email within a specific time 
-      frame using Azure Logic Apps, SQL Server, and C#/.NET.`,
+      `Creation of a website for a company in the supply chain sector and automation of processes to receive a report summarizing invoices and other relevant information via email within a specific time frame using Azure Logic Apps, SQL Server, and C#/.NET.`,
     image: "/projects/tfg.webp",
     link: "/projects/tfg.pdf",
     tags: [TAGS.CSHARP, TAGS.SQLSERVER, TAGS.AZURE, TAGS.JAVASCRIPT, TAGS.HTML, TAGS.CSS],
@@ -41,11 +36,7 @@ const PROJECTS = [
   {
     title: "Notes App",
     subtitle: "A simple TO DO application",
-    description:
-      `Note-taking application to strengthen 
-      my proficiency in React, Node, and MongoDB. The project features 
-      a RESTful API enabling user authentication, allowing seamless logins. 
-      Users can effortlessly create, organize, and share notes with others.`,
+    description: `Note-taking application to strengthen my proficiency in React, Node, and MongoDB. The project features a RESTful API enabling user authentication, allowing seamless logins. Users can effortlessly create, organize, and share notes with others.`,
     image: "/projects/notes-app.webp",
     tags: [TAGS.REACT, TAGS.NODE, TAGS.MONGODB],
   },
@@ -54,7 +45,7 @@ const PROJECTS = [
 
 <div class="flex flex-col pt-4 gap-y-20">
   {
-    PROJECTS.map(({ image, title, subtitle, description, tags, link }) => (
+    PROJECTS.map(({ image, title, subtitle, description, tags, link }, index) => (
       <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-1/2">
         <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -82,8 +73,8 @@ const PROJECTS = [
           <h4 class="w-[100%] mt-2 font-medium text-gray-800 dark:text-gray-300">
             {subtitle}
           </h4>
-          <div class="mt-1 text-justify text-gray-700 dark:text-gray-400">{description}</div>
-          <footer class="flex items-end justify-start mt-4 gap-x-4">
+          <Description id={index+'projects'} text={description} textClass="mt-1 text-gray-700 dark:text-gray-400 line-clamp-2"/>
+          <footer class="flex w-[100%] justify-center md:justify-end right-0 mt-5">
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />

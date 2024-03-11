@@ -1,34 +1,23 @@
 ---
-const { id, text } = Astro.props;
+const { id, text, textClass = '' } = Astro.props;
 
-let MAX_LENGTH = 75
-const isTextLong = text.length >= MAX_LENGTH
-if (isTextLong) {
-    MAX_LENGTH = text.indexOf('.', MAX_LENGTH) + 1
-}
-const moreText = isTextLong ? text.substring(MAX_LENGTH) : ''
-const showText = isTextLong ? text.substring(0, MAX_LENGTH) : text
-
+const spanClass = `whitespace-pre-line showed-text line-clamp-3 ${textClass}`
 ---
 
 <div class="content">
-    <span class="short-text">
-        {showText}
-    </span>
     <input type="checkbox" id={id} class="read-more-state hidden">
-    <span class="read-more-target hidden">
-        {moreText}
+    <span class={spanClass}>
+        {text}
     </span>
     <label for={id} class="block w-fit read-more-trigger cursor-pointer mt-2 text-sm text-[#9a9a9a] hover:text-[#5a5a5a] dark:text-[#666] dark:hover:text-[#434343]"></label>
 </div>
 
 <style>
-    .short-text, .read-more-target {
-        white-space: pre-line;
-    }
-
-    .read-more-state:checked ~ .read-more-target {
-        display: contents;
+    .read-more-state:checked ~ .showed-text {
+        overflow: visible;
+        display: block;
+        -webkit-box-orient: horizontal;
+        -webkit-line-clamp: none;
     }
 
     .read-more-state ~ .read-more-trigger:before {
