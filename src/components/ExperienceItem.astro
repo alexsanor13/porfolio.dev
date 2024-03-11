@@ -43,7 +43,7 @@ const {id, title, company, description, link, date, tags} = Astro.props
     </div>
   </div>
   <div class="relative text-left flex flex-col gap-2 pb-4 text-gray-600 dark:text-gray-300 md:col-span-3">
-    <Description id={id} text={description} lines={2}/>
+    <Description id={id} text={description} textClass="line-clamp-2 md:line-clamp-5"/>
     {
       link && (
         <LinkInline href={link}>

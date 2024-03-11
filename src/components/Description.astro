@@ -1,8 +1,7 @@
 ---
-const { id, text, textClass = '', lines = 'unset' } = Astro.props;
+const { id, text, textClass = ''} = Astro.props;
 
-const lineClamp = `line-clamp-${lines}`
-const spanClass = `whitespace-pre-line showed-text ${textClass} ${lineClamp}`
+const spanClass = `whitespace-pre-line showed-text ${textClass}`
 ---
 
 <div class="content">
@@ -10,7 +9,7 @@ const spanClass = `whitespace-pre-line showed-text ${textClass} ${lineClamp}`
     <span class={spanClass}>
         {text}
     </span>
-    <label for={id} class="inline read-more-trigger cursor-pointer mt-2 text-sm text-[#9a9a9a] hover:text-[#5a5a5a] dark:text-[#666] dark:hover:text-[#434343]"></label>
+    <label for={id} class="block read-more-trigger cursor-pointer mt-2 text-sm text-[#9a9a9a] hover:text-[#5a5a5a] dark:text-[#666] dark:hover:text-[#434343]"></label>
 </div>
 
 <style>
