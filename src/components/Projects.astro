@@ -73,8 +73,8 @@ const PROJECTS = [
           <h4 class="w-[100%] mt-2 font-medium text-gray-800 dark:text-gray-300">
             {subtitle}
           </h4>
-          <Description id={index+'projects'} text={description} textClass="mt-1 text-gray-700 dark:text-gray-400 line-clamp-2"/>
-          <footer class="flex w-[100%] justify-center md:justify-end right-0 mt-5">
+          <Description id={index+'projects'} text={description} lines="2" textClass="mt-1 text-gray-700 dark:text-gray-400"/>
+          <footer class="flex w-[100%] justify-end mt-1">
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />
