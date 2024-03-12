@@ -57,8 +57,8 @@ const PROJECTS = [
         <h3 class="center text-2xl font-bold text-gray-800 dark:text-gray-100">
           {title}
         </h3>
-        <div class="flex flex-wrap mt-2">
-          <ul class="flex flex-wrap mb-2 gap-2">
+        <div class="flex flex-wrap">
+          <ul class="flex flex-wrap my-2 gap-2">
               {tags.map((tag) => (
                 <li>
                   <span
@@ -70,14 +70,14 @@ const PROJECTS = [
                 </li>
               ))}
             </ul>
-          <h4 class="w-[100%] mt-2 font-medium text-gray-800 dark:text-gray-300">
+          <h4 class="w-[100%] mt-1 font-semibold text-gray-800 dark:text-gray-200">
             {subtitle}
           </h4>
-          <Description id={index+'projects'} text={description} textClass="mt-1 text-gray-700 dark:text-gray-400 line-clamp-2"/>
-          <footer class="flex w-[100%] justify-center md:justify-end mt-1">
+          <Description id={index+'projects'} text={description} textClass="text-gray-700 dark:text-gray-400 line-clamp-2 mt-1"/>
+          <footer class="flex w-[100%] justify-end">
               {link && (
                 <LinkButton href={link}>
-                  <Link class="size-4" />
+                  <Link class="size-3" />
                   Preview
                 </LinkButton>
               )}

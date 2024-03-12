@@ -1,7 +1,7 @@
 ---
 const { id, text, textClass = ''} = Astro.props;
 
-const spanClass = `whitespace-pre-line showed-text ${textClass}`
+const spanClass = `whitespace-pre-line showed-text select-text ${textClass}`
 ---
 
 <div class="content">
@@ -9,7 +9,7 @@ const spanClass = `whitespace-pre-line showed-text ${textClass}`
     <span class={spanClass}>
         {text}
     </span>
-    <label for={id} class="block read-more-trigger cursor-pointer mt-2 text-sm text-[#9a9a9a] hover:text-[#5a5a5a] dark:text-[#666] dark:hover:text-[#434343]"></label>
+    <label for={id} class="block read-more-trigger cursor-pointer mt-1 text-sm text-[#9a9a9a] hover:text-[#5a5a5a] dark:text-[#666] dark:hover:text-[#434343]"></label>
 </div>
 
 <style>
